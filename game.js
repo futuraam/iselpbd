@@ -128,7 +128,7 @@ function update() {
       })
       gameState.leftMostBug = sortedEnemies()[0];
       gameState.rightMostBug = sortedEnemies()[sortedEnemies().length - 1];
-      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 840) {
+      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 800) {
         gameState.enemyVelocity *= -1;
         gameState.enemies.getChildren().forEach(bug => {
           bug.y += 10;
