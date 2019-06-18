@@ -38,7 +38,7 @@ function create() {
     platforms.create(360, 780, 'platform').setScale(2, .6).refreshBody();
 
     // Displays the initial number of bugs, this value is initially hardcoded as 24 
-    gameState.scoreText = this.add.text(320, 780, 'Bugs Left: 24', { fontSize: '30px', fill: '#000000' });
+    gameState.scoreText = this.add.text(280, 750, 'Bugs Left: 24', { fontSize: '30px', fill: '#000000' });
 
     // Uses the physics plugin to create Codey
     gameState.player = this.physics.add.sprite(360, 730, 'codey').setScale(1);
@@ -128,7 +128,7 @@ function update() {
       })
       gameState.leftMostBug = sortedEnemies()[0];
       gameState.rightMostBug = sortedEnemies()[sortedEnemies().length - 1];
-      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 800) {
+      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 785) {
         gameState.enemyVelocity *= -1;
         gameState.enemies.getChildren().forEach(bug => {
           bug.y += 10;
