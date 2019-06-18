@@ -56,7 +56,7 @@ function create() {
     for (let xVal = 1; xVal < 9; xVal++) {
       gameState.enemies.create(100 * xVal, 100 * yVal, 'bug1')
       .setScale(1.2)
-      .setGravityY(-400);
+      .setGravityY(-200);
     };
   };
   let pellets = this.physics.add.group();
@@ -78,7 +78,7 @@ function create() {
     gameState.pelletsLoop.destroy();
     this.physics.pause();
     this.add.text(420, 500, 'Game Over \n Click to restart', { fontSize: '30px', fill: '#000' });
-    gameState.enemyVelocity = 2;
+    gameState.enemyVelocity = 1;
   });
   gameState.bugRepellent = this.physics.add.group();
   this.physics.add.collider(gameState.enemies, gameState.bugRepellent, (bug, repellent) => {
@@ -90,7 +90,7 @@ function create() {
     shots.destroy();
     repellent.destroy();
   });
-  gameState.enemyVelocity = 2;
+  gameState.enemyVelocity = 1;
     this.physics.add.collider(gameState.enemies, gameState.player, () => {
     gameState.active = false;
     gameState.pelletsLoop.destroy();
@@ -103,9 +103,9 @@ function update() {
     if (gameState.active) {
         // If the game is active, then players can control Codey
         if (gameState.cursors.left.isDown) {
-            gameState.player.setVelocityX(-320);
+            gameState.player.setVelocityX(-160);
         } else if (gameState.cursors.right.isDown) {
-            gameState.player.setVelocityX(320);
+            gameState.player.setVelocityX(160);
         } else {
             gameState.player.setVelocityX(0);
         }
@@ -118,7 +118,7 @@ function update() {
 
         // Add logic for winning condition and enemy movements below:
     if (numOfTotalEnemies() === 0) {
-      gameState.enemyVelocity = 2;
+      gameState.enemyVelocity = 1;
       gameState.active = false;
       this.physics.pause();
       this.add.text(400, 420, 'You win!', {fontSize: '30px', fill: '#000000'})
