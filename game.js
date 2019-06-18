@@ -35,7 +35,7 @@ function create() {
 
     // Creating static platforms
     const platforms = this.physics.add.staticGroup();
-    platforms.create(450, 980, 'platform').setScale(1, .6).refreshBody();
+    platforms.create(450, 980, 'platform').setScale(2, .6).refreshBody();
 
     // Displays the initial number of bugs, this value is initially hardcoded as 24 
     gameState.scoreText = this.add.text(350, 964, 'Bugs Left: 24', { fontSize: '30px', fill: '#000000' });
