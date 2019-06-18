@@ -62,7 +62,8 @@ function create() {
   let pellets = this.physics.add.group();
   function genPellet() {
     let randomBug = Phaser.Utils.Array.GetRandom(gameState.enemies.getChildren());
-    pellets.create(randomBug.x, randomBug.y, 'bugPellet');
+    pellets.create(randomBug.x, randomBug.y, 'bugPellet')
+    .setScale(1.75);
   };
   gameState.pelletsLoop = this.time.addEvent({
     delay: 300,
