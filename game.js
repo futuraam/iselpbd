@@ -38,10 +38,10 @@ function create() {
     platforms.create(360, 780, 'platform').setScale(2, .6).refreshBody();
 
     // Displays the initial number of bugs, this value is initially hardcoded as 24 
-    gameState.scoreText = this.add.text(350, 964, 'Bugs Left: 24', { fontSize: '30px', fill: '#000000' });
+    gameState.scoreText = this.add.text(360, 780, 'Bugs Left: 24', { fontSize: '30px', fill: '#000000' });
 
     // Uses the physics plugin to create Codey
-    gameState.player = this.physics.add.sprite(450, 900, 'codey').setScale(1);
+    gameState.player = this.physics.add.sprite(360, 760, 'codey').setScale(1);
 
     // Create Collider objects
     gameState.player.setCollideWorldBounds(true);
