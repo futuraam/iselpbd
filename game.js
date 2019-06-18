@@ -114,6 +114,7 @@ function update() {
         // Execute code if the spacebar key is pressed
         if (Phaser.Input.Keyboard.JustDown(gameState.cursors.space)) {
             gameState.bugRepellent.create(gameState.player.x, gameState.player.y, 'bugRepellent')
+          .setScale(1.75)
       .setGravityY(-800)
         }
 
