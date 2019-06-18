@@ -77,7 +77,7 @@ function create() {
     gameState.active = false;
     gameState.pelletsLoop.destroy();
     this.physics.pause();
-    this.add.text(420, 500, 'Game Over \n Click to restart', { fontSize: '30px', fill: '#000' });
+    this.add.text(320, 400, 'Game Over \n Click to restart', { fontSize: '30px', fill: '#000' });
     gameState.enemyVelocity = 1;
   });
   gameState.bugRepellent = this.physics.add.group();
@@ -95,7 +95,7 @@ function create() {
     gameState.active = false;
     gameState.pelletsLoop.destroy();
     this.physics.pause();
-    this.add.text(420, 500, 'Game Over \n Click to restart', { fontSize: '30px', fill: '#000' });
+    this.add.text(320, 400, 'Game Over \n Click to restart', { fontSize: '30px', fill: '#000' });
   });
 };
 
@@ -128,7 +128,7 @@ function update() {
       })
       gameState.leftMostBug = sortedEnemies()[0];
       gameState.rightMostBug = sortedEnemies()[sortedEnemies().length - 1];
-      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 715) {
+      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 710) {
         gameState.enemyVelocity *= -1;
         gameState.enemies.getChildren().forEach(bug => {
           bug.y += 10;
