@@ -123,7 +123,7 @@ function update() {
       gameState.enemyVelocity = 1;
       gameState.active = false;
       this.physics.pause();
-      this.add.text(400, 420, 'You win!', {fontSize: '30px', fill: '#000000'})
+      this.add.text(280, 420, 'You win!', {fontSize: '30px', fill: '#000000'})
     } else {
       gameState.enemies.getChildren().forEach(bug => {
         bug.x += gameState.enemyVelocity;
