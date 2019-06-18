@@ -128,7 +128,7 @@ function update() {
       })
       gameState.leftMostBug = sortedEnemies()[0];
       gameState.rightMostBug = sortedEnemies()[sortedEnemies().length - 1];
-      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 980) {
+      if (gameState.leftMostBug.x < 10 || gameState.rightMostBug.x > 790) {
         gameState.enemyVelocity *= -1;
         gameState.enemies.getChildren().forEach(bug => {
           bug.y += 10;
@@ -140,8 +140,8 @@ function update() {
 
 const config = {
     type: Phaser.AUTO,
-    width: 900,
-    height: 1000,
+    width: 720,
+    height: 800,
     backgroundColor: "b9eaff",
     physics: {
         default: 'arcade',
